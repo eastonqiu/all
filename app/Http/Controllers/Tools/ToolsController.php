@@ -30,8 +30,9 @@ class ToolsController extends Controller
 
 		Menu::macro('toolsSidebar', function () {
 		    return Menu::adminlteMenu()
-			   ->action('Tools\ToolsController@index', '<i class="fa fa-circle-o"></i>Home')
-			   ->url('/tool/unixtime', '<i class="fa fa-circle-o"></i>Unix时间戳')
+			   ->url('/tools/index', '<i class="fa fa-circle-o"></i>工具大全')
+			   ->url('/tools/unixtime', '<i class="fa fa-circle-o"></i>Unix时间戳转换')
+			   ->url('/tools/strlen', '<i class="fa fa-circle-o"></i>在线字符串长度')
 		    //    ->add(
 		    //        Menu::adminlteSubmenu('菜单', 'fa-laptop')
 		    //            ->add(Link::to('/profile', 'Profile'))
@@ -40,10 +41,6 @@ class ToolsController extends Controller
 		        ->setActiveFromRequest();
 		});
     }
-
-	public function index() {
-		return view("tools.layout");
-	}
 
 	public function module(Request $request, $module) {
 		return view("tools.$module");

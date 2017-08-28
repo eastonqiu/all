@@ -15,5 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tool/index', 'Tools\ToolsController@index');
-Route::get('/tool/{module}', 'Tools\ToolsController@module');
+Route::get('/tools/{module}', 'Tools\ToolsController@module');

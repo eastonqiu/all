@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>@yield('title') | 工具大全</title>
+  <title>@yield('title') 工具大全</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -29,6 +29,8 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="{{ asset("/packages/admin/google-fonts/fonts.css") }}">
+
+  <script src="https://s22.cnzz.com/z_stat.php?id=1263885998&web_id=1263885998" language="JavaScript"></script>
 </head>
 <body class="hold-transition skin-black-light sidebar-mini">
 <div class="wrapper">
@@ -75,7 +77,9 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <section class="content">
     @yield('content')
+    </section>
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
@@ -283,6 +287,7 @@
 <script src="{{ asset ("/packages/admin/AdminLTE/bootstrap/js/bootstrap.min.js") }}"></script>
 <script src="{{ asset ("/tools/fastclick.js") }}"></script>
 <script src="{{ asset ("/tools/adminlte.min.js") }}"></script>
+<script src="{{ asset ("/js/tools.js") }}"></script>
 
 </body>
 </html>
