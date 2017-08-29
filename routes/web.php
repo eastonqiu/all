@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'Tools\ToolsController@index');
-Route::get('/{module}', 'Tools\ToolsController@module');
+Route::get('/t/{module}', 'Tools\ToolsController@module');
