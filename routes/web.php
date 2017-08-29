@@ -11,8 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/tools/{module}', 'Tools\ToolsController@module');
+Route::get('/', 'Tools\ToolsController@index');
+Route::get('/{module}', 'Tools\ToolsController@module');
