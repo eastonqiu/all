@@ -6,6 +6,12 @@
   <title>@yield('title') 在线工具大全</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <meta name="discription" content="在线编程工具大全 Unix时间戳转换 字符串长度计算 url编码解码 密码随机生成 加密算法">
+
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="{{ asset("/packages/admin/AdminLTE/bootstrap/css/bootstrap.min.css") }}">
   <!-- Font Awesome -->
