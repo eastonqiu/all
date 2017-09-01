@@ -63,6 +63,20 @@ function randomPassword(size) {
 	return createPassword;
 }
 
+function crypto(algorithm, message, password, encrypt) {
+	switch(algorithm) {
+		case 'AES':
+			return encrypt ? CryptoJS.AES.encrypt(message, password) : CryptoJS.AES.decrypt(message, password);
+		case 'DES':
+			return encrypt ? CryptoJS.DES.encrypt(message, password) : CryptoJS.DES.decrypt(message, password);
+		case 'RC4':
+			return encrypt ? CryptoJS.RC4.encrypt(message, password) : CryptoJS.RC4.decrypt(message, password);
+		case 'Rabbit':
+			return encrypt ? CryptoJS.Rabbit.encrypt(message, password) : CryptoJS.Rabbit.decrypt(message, password);
+	}
+	return '';
+}
+
 $(function() {
 	if($("#ut_2TimeAtGMT8").length > 0) {
 		var date = new Date();
