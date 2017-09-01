@@ -45,7 +45,7 @@ class ToolsController extends Controller
     }
 
     public function index(Request $request) {
-		return view("tools.index");
+		return view("tools.unixtime");
 	}
 
 	public function module(Request $request, $module) {
