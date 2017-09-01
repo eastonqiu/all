@@ -34,6 +34,7 @@ class ToolsController extends Controller
 			   ->url('/t/unixtime', '<i class="fa fa-circle-o"></i>Unix时间戳转换')
 			   ->url('/t/strlen', '<i class="fa fa-circle-o"></i>在线字符串长度')
 			   ->url('/t/urlencode', '<i class="fa fa-circle-o"></i>在线URL编码/解码')
+			   ->url('/t/password', '<i class="fa fa-circle-o"></i>在线随机密码生成')
 		    //    ->add(
 		    //        Menu::adminlteSubmenu('菜单', 'fa-laptop')
 		    //            ->add(Link::to('/profile', 'Profile'))
