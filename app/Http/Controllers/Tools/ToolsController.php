@@ -8,6 +8,7 @@ use Menu;
 use Spatie\Menu\Laravel\Html;
 use Spatie\Menu\Laravel\Link;
 use Illuminate\Http\Request;
+use App\Common\Crawler\Crawler;
 
 class ToolsController extends Controller
 {
@@ -35,6 +36,7 @@ class ToolsController extends Controller
 			   ->url('/t/strlen', '<i class="fa fa-circle-o"></i>在线字符串长度')
 			   ->url('/t/urlencode', '<i class="fa fa-circle-o"></i>在线URL编码/解码')
 			   ->url('/t/password', '<i class="fa fa-circle-o"></i>在线随机密码生成')
+			   ->url('/t/foods_xiangke', '<i class="fa fa-circle-o"></i>在线查询食物相克')
 			   // ->url('/t/encrypt', '<i class="fa fa-circle-o"></i>在加密/解密')
 		    //    ->add(
 		    //        Menu::adminlteSubmenu('菜单', 'fa-laptop')
@@ -51,5 +53,14 @@ class ToolsController extends Controller
 
 	public function module(Request $request, $module) {
 		return view("tools.$module");
+	}
+
+	public function foodsXiangke(Request $request) {
+		$xiangkeList = [];
+		if($request->input('foods')) {
+			$crawler = new Crawler();
+			$xiangkeList = $crawler->crawl('FoodsXiangke', ['name' => $request->input('foods')]);
+		}
+		return view("tools.foods_xiangke")->with('xiangkeList', $xiangkeList);
 	}
 }
