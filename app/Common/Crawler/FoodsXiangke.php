@@ -9,7 +9,7 @@ class FoodsXiangke extends Crawler {
 
 	protected function parse($body) {
 		$body = json_decode($body, true);
-		if(! ($body && isset($body['info']))) {
+		if(! ($body && isset($body['status']) && $body['status'] && isset($body['info']))) {
 			return NULL;
 		}
 
