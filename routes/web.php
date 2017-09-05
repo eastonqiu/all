@@ -13,4 +13,5 @@
 
 Route::get('/', 'Tools\ToolsController@index');
 Route::get('/t/foods_xiangke', 'Tools\ToolsController@foodsXiangke');
+Route::get('/t/mobile', 'Tools\ToolsController@mobile');
 Route::get('/t/{module}', 'Tools\ToolsController@module');

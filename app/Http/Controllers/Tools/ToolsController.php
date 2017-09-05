@@ -71,7 +71,7 @@ class ToolsController extends Controller
 		$info = [];
 		if($request->input('mobile')) {
 			$crawler = new Crawler();
-			$info = $crawler->crawl('Mobile', ['name' => $request->input('mobile')]);
+			$info = $crawler->crawl('Mobile', ['mobile' => $request->input('mobile'), 'operate' => 'query']);
 		}
 		return view("tools.mobile")->with('info', $info);
 	}
