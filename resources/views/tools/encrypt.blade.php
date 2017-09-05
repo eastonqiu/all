@@ -1,4 +1,4 @@
-@extends('tools.index')
+@extends('tools.layout')
 
 @section('title')
 	在线加密/解密

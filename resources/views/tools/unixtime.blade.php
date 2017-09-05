@@ -1,4 +1,4 @@
-@extends('tools.index')
+@extends('tools.layout')
 
 @section('title')
 	Unix时间戳(Unix timestamp)转换工具

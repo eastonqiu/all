@@ -1,4 +1,4 @@
-@extends('tools.index')
+@extends('tools.layout')
 
 @section('title')
 	在线计算字符串长度
