@@ -40,6 +40,7 @@ class ToolsController extends Controller
 			   ->url('/t/radix', '<i class="fa fa-circle-o"></i>在线进制转换')
 			   ->url('/t/qrcode', '<i class="fa fa-circle-o"></i>在线二维码生成')
 			   ->url('/t/mobile', '<i class="fa fa-circle-o"></i>手机归属地查询')
+			//    ->url('/t/mobile', '<i class="fa fa-circle-o"></i>RGB颜色对照及转换(coming)')
 			   // ->url('/t/encrypt', '<i class="fa fa-circle-o"></i>在加密/解密')
 		    //    ->add(
 		    //        Menu::adminlteSubmenu('菜单', 'fa-laptop')
