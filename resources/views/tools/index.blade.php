@@ -35,6 +35,16 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="{{ asset("/packages/admin/google-fonts/fonts.css") }}">
+
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?7e94d4c042f8be3fcbf94c1bb1056dfc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
 </head>
 <body class="hold-transition skin-black-light sidebar-mini">
 <div class="wrapper">
@@ -89,7 +99,6 @@
   <footer class="main-footer">
     <strong>Copyright &copy; 2017-2018 <a href="//tools.vike.xin">工具大全</a>.</strong> All rights
     reserved. 粤ICP备17108036号
-    <script src="https://s22.cnzz.com/z_stat.php?id=1263885998&web_id=1263885998" language="JavaScript"></script>
   </footer>
 </div>
 <!-- ./wrapper -->
