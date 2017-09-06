@@ -40,6 +40,8 @@ class ToolsController extends Controller
 			   ->url('/t/radix', '<i class="fa fa-circle-o"></i>在线进制转换')
 			   ->url('/t/qrcode', '<i class="fa fa-circle-o"></i>在线二维码生成')
 			   ->url('/t/mobile', '<i class="fa fa-circle-o"></i>手机归属地查询')
+			   ->url('/t/scan_port', '<i class="fa fa-circle-o"></i>端口扫描')
+			   ->url('/t/ht2nginx', '<i class="fa fa-circle-o"></i>htaccess转nginx')
 			//    ->url('/t/mobile', '<i class="fa fa-circle-o"></i>RGB颜色对照及转换(coming)')
 			   // ->url('/t/encrypt', '<i class="fa fa-circle-o"></i>在加密/解密')
 		    //    ->add(
@@ -75,5 +77,23 @@ class ToolsController extends Controller
 			$info = $crawler->crawl('Mobile', ['mobile' => $request->input('mobile'), 'operate' => 'query']);
 		}
 		return view("tools.mobile")->with('info', $info);
+	}
+
+	public function scanPort(Request $request) {
+		$info = [];
+		if($request->input('server')) {
+			$crawler = new Crawler();
+			$info = $crawler->crawl('ScanPort', ['addr' => $request->input('server'), 'ports' => $request->input('ports')]);
+		}
+		return view("tools.scan_port")->with('info', $info);
+	}
+
+	public function ht2Nginx(Request $request) {
+		$info = [];
+		if($request->input('htaccess')) {
+			$crawler = new Crawler();
+			$info = $crawler->crawl('Ht2Nginx', ['code' => $request->input('htaccess')]);
+		}
+		return view("tools.ht2nginx")->with('info', $info);
 	}
 }

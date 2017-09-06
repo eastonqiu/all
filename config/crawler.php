@@ -17,5 +17,15 @@ return [
 	'Mobile' => [
 		'url' => 'http://tool.lu/mobile/ajax.html',
 		'method' => 'POST',
-	]
+	],
+
+	'ScanPort' => [
+		'url' => 'http://tool.lu/portscan/ajax.html',
+		'method' => 'POST',
+	],
+
+	'Ht2Nginx' => [
+		'url' => 'http://tool.lu/htaccess2nginx/ajax.html',
+		'method' => 'POST',
+	],
 ];
