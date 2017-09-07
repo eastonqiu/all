@@ -106,6 +106,7 @@
 <script src="{{ asset ("/packages/admin/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js") }}"></script>
 <script type="text/javascript" src="https://cdn.bootcss.com/lrsjng.jquery-qrcode/0.14.0/jquery-qrcode.min.js"></script>
 <script src="{{ asset ("/packages/admin/AdminLTE/bootstrap/js/bootstrap.min.js") }}"></script>
+<script src="{{ asset ("/tools/jquery-base64.js") }}"></script>
 <script src="{{ asset ("/tools/fastclick.js") }}"></script>
 <script src="{{ asset ("/tools/adminlte.min.js") }}"></script>
 <script src="{{ asset ("/js/tools.js") }}"></script>

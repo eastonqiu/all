@@ -42,6 +42,7 @@ class ToolsController extends Controller
 			   ->url('/t/mobile', '<i class="fa fa-circle-o"></i>手机归属地查询')
 			   ->url('/t/scan_port', '<i class="fa fa-circle-o"></i>端口扫描')
 			   ->url('/t/ht2nginx', '<i class="fa fa-circle-o"></i>htaccess转nginx')
+			   ->url('/t/base64', '<i class="fa fa-circle-o"></i>base64编码/解码')
 			//    ->url('/t/mobile', '<i class="fa fa-circle-o"></i>RGB颜色对照及转换(coming)')
 			   // ->url('/t/encrypt', '<i class="fa fa-circle-o"></i>在加密/解密')
 		    //    ->add(

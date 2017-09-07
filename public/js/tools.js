@@ -77,6 +77,16 @@ function crypto(algorithm, message, password, encrypt) {
 	return '';
 }
 
+function base64(text, isEncode) {
+	if(isEncode) {
+		$.base64.utf8encode = true;
+		return $.base64('encode', text);
+	} else {
+		$.base64.utf8decode = true;
+		return $.base64('decode', text);
+	}
+}
+
 $(function() {
 	if($("#ut_2TimeAtGMT8").length > 0) {
 		var date = new Date();
