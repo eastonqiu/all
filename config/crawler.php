@@ -28,4 +28,9 @@ return [
 		'url' => 'http://tool.lu/htaccess2nginx/ajax.html',
 		'method' => 'POST',
 	],
+
+	'DLT' => [
+		'url' => 'http://daletou.cjcp.com.cn/kaijiang/',
+		'method' => 'POST',
+	],
 ];

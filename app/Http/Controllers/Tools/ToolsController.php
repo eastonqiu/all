@@ -43,6 +43,7 @@ class ToolsController extends Controller
 			   ->url('/t/scan_port', '<i class="fa fa-circle-o"></i>端口扫描')
 			   ->url('/t/ht2nginx', '<i class="fa fa-circle-o"></i>htaccess转nginx')
 			   ->url('/t/base64', '<i class="fa fa-circle-o"></i>base64编码/解码')
+			   ->url('/t/caipiao', '<i class="fa fa-circle-o"></i>彩票开奖查询')
 			//    ->url('/t/mobile', '<i class="fa fa-circle-o"></i>RGB颜色对照及转换(coming)')
 			   // ->url('/t/encrypt', '<i class="fa fa-circle-o"></i>在加密/解密')
 		    //    ->add(
@@ -96,5 +97,14 @@ class ToolsController extends Controller
 			$info = $crawler->crawl('Ht2Nginx', ['code' => $request->input('htaccess')]);
 		}
 		return view("tools.ht2nginx")->with('info', $info);
+	}
+
+	public function caipiao(Request $request) {
+		$info = [];
+		if($request->input('type')) {
+			$crawler = new Crawler();
+			$info = $crawler->crawl('CaiPiao', ['code' => $request->input('htaccess')]);
+		}
+		return view("tools.caipiao")->with('info', $info);
 	}
 }
